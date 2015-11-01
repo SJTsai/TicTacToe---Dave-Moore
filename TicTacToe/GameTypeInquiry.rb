@@ -4,7 +4,7 @@ class GameTypeInquiry
     display_straightforward_inquiry
     user_option = get_user_option
     
-    until is_valid_option?(user_option)
+    until is_valid_game_type_option?(user_option)
       display_wrong_input_inquiry
       user_option = get_user_option
     end
@@ -34,7 +34,7 @@ class GameTypeInquiry
   end
   
   private
-  def is_valid_option?(option)
+  def is_valid_game_type_option?(option)
     return option == "1" || option == "2" || option == "3"
   end
   
