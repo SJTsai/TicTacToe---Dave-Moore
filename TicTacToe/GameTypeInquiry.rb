@@ -15,12 +15,12 @@ class GameTypeInquiry
   private
   def display_straightforward_inquiry
     puts "Please choose a game type:"
-    display_options
+    display_game_type_options
     puts 
   end
   
   private
-  def display_options
+  def display_game_type_options
     puts "(1) Human vs. Human"
     puts "(2) Human vs. Computer"
     puts "(3) Computer vs. Computer"
@@ -41,7 +41,7 @@ class GameTypeInquiry
   private
   def display_wrong_input_inquiry
     puts "You must choose 1, 2, or 3."
-    display_options
+    display_game_type_options
     puts
   end
   
