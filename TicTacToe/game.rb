@@ -38,7 +38,7 @@ class Game
   def eval_board
     spot = nil
     until spot
-      if @board[4] == "4"
+      if is_center_spot_empty?(@board)
         spot = 4
         @board[spot] = @computer_marker
       else
@@ -50,6 +50,10 @@ class Game
         end
       end
     end
+  end
+  
+  def is_center_spot_empty?(board)
+    board[4] == "4"
   end
 
   def get_best_move(board, next_player, depth = 0, best_score = {})
