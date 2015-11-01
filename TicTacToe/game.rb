@@ -1,7 +1,7 @@
 class Game
   def initialize
     @board = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
-    @computerMarker = "X"
+    @computer_marker = "X"
     @human_marker = "O"
   end
 
@@ -40,11 +40,11 @@ class Game
     until spot
       if @board[4] == "4"
         spot = 4
-        @board[spot] = @computerMarker
+        @board[spot] = @computer_marker
       else
-        spot = get_best_move(@board, @computerMarker)
+        spot = get_best_move(@board, @computer_marker)
         if @board[spot] != "X" && @board[spot] != "O"
-          @board[spot] = @computerMarker
+          @board[spot] = @computer_marker
         else
           spot = nil
         end
@@ -61,7 +61,7 @@ class Game
       end
     end
     available_spaces.each do |as|
-      board[as.to_i] = @computerMarker
+      board[as.to_i] = @computer_marker
       if game_is_over(board)
         best_move = as.to_i
         board[as.to_i] = as
