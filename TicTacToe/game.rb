@@ -53,7 +53,11 @@ class Game
   end
   
   def is_center_spot_empty?(board)
-    board[4] == "4"
+    is_spot_empty_on_board?(4, board)
+  end
+  
+  def is_spot_empty_on_board?(spot, board)
+    board[spot] == spot.to_s
   end
 
   def get_best_move(board, next_player, depth = 0, best_score = {})
