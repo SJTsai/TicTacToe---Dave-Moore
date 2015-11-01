@@ -43,7 +43,7 @@ class Game
         @board[spot] = @computer_marker
       else
         spot = get_best_move(@board, @computer_marker)
-        if @board[spot] != "X" && @board[spot] != "O"
+        if is_spot_empty_on_board?(spot, @board)
           @board[spot] = @computer_marker
         else
           spot = nil
