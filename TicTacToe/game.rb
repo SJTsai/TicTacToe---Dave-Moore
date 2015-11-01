@@ -2,7 +2,7 @@ class Game
   def initialize
     @board = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
     @computerMarker = "X"
-    @hum = "O"
+    @human_marker = "O"
   end
 
   def start_game
@@ -28,7 +28,7 @@ class Game
     until spot
       spot = gets.chomp.to_i
       if @board[spot] != "X" && @board[spot] != "O"
-        @board[spot] = @hum
+        @board[spot] = @human_marker
       else
         spot = nil
       end
@@ -67,7 +67,7 @@ class Game
         board[as.to_i] = as
         return best_move
       else
-        board[as.to_i] = @hum
+        board[as.to_i] = @human_marker
         if game_is_over(board)
           best_move = as.to_i
           board[as.to_i] = as
