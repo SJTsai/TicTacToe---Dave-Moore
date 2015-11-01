@@ -1,6 +1,6 @@
 class PlayerTurnOrderInquiry
   public
-  def inquire_player_turn_order
+  def inquire_about_first_player
     display_straightforward_inquiry
     user_option = get_user_option
     
