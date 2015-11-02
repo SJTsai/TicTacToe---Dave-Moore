@@ -1,8 +1,16 @@
+require_relative 'game_settings'
+require_relative 'player'
+
 class Game
-  def initialize
-    @board = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
-    @computer_marker = "X"
-    @human_marker = "O"
+  def initialize(game_settings)    
+    @player_one = game_settings.first_player
+    @player_two = game_settings.second_player
+    
+    if game_settings.first_player_type == :PlayerOne
+      @current_player = @player_one
+    else
+      @current_player = @player_two
+    end
   end
 
   def start_game
