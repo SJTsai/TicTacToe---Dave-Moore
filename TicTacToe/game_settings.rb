@@ -1,3 +1,6 @@
+require_relative 'human_player'
+require_relative 'computer_player'
+
 class GameSettings
   attr_reader :game_type, :first_player_type, :first_player_marker
   
