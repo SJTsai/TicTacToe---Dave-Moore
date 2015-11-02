@@ -1,6 +1,6 @@
-require_relative 'GameTypeInquiry'
-require_relative 'MarkerInquiry'
-require_relative 'PlayerTurnOrderInquiry'
+require_relative 'game_type_inquiry'
+require_relative 'marker_inquiry'
+require_relative 'player_turn_order_inquiry'
 
 class GameSettingsInquiry
   public

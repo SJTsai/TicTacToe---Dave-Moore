@@ -1,5 +1,5 @@
-require_relative 'GameSettings'
-require_relative 'GameSettingsInquiry'
+require_relative 'game_settings'
+require_relative 'game_settings_inquiry'
 
 class GameDriver
   public
